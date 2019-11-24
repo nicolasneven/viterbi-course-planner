@@ -54,8 +54,8 @@
 			
 		</tr>
 	</table>
-	<form id="formA"><button id="Login">Login</button></form>
-	<form id="formB"><button id="Register">Register</button></form>
+	<form action = "Login.jsp" id="formA"><button id="Login">Login</button></form>
+	<form action = "Register.html" id="formB"><button id="Register">Register</button></form>
 				
 </div>
 
