@@ -59,35 +59,26 @@ public class Login extends HttpServlet {
 		String username = request.getParameter("username");
 		Document user = collection.find(eq("_id", username)).first();
 		session.setAttribute("message", "");
+		
 		if (user != null) {
 			
 	        String password = request.getParameter("password");
-	        Document userTwo = collection.find(eq("_password",password)).first();
-	        if (userTwo == null) {
+	        if (user.get("password").equals(password)) {
+	        	session.setAttribute("user", user.toJson());
+    			RequestDispatcher dispatch = getServletContext().getRequestDispatcher("/schedule.jsp");
+        		dispatch.forward(request, response);
+	        } else {
 	        	RequestDispatcher dispatch = getServletContext().getRequestDispatcher("/Login.jsp");
 				session.setAttribute("message", "Password does not match!");
 		        dispatch.forward(request, response);
-		 
-	        }else {
-	        	if (user != userTwo) {
-	        		RequestDispatcher dispatch = getServletContext().getRequestDispatcher("/Login.jsp");
-	        		session.setAttribute("message", "Password does not match!");
-			        dispatch.forward(request, response);
-	        	}else {
-	        		session.setAttribute("user", user.toJson());
-	    			RequestDispatcher dispatch = getServletContext().getRequestDispatcher("/schedule.jsp");
-	    	        dispatch.forward(request, response);
-	        		session.setAttribute("login", true);
-	        		dispatch.forward(request, response);
-	        	}
 	        }
+	        
 		} else {
 			RequestDispatcher dispatch = getServletContext().getRequestDispatcher("/Login.jsp");
 			session.setAttribute("message", "User does not exist!");
 	        dispatch.forward(request, response);
 		}
-		
-		
+
 	}
 
 	/**
