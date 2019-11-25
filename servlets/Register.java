@@ -53,31 +53,26 @@ public class Register extends HttpServlet {
 		String email = request.getParameter("email");
 		String major = request.getParameter("major");
 		String gradyear = request.getParameter("gradyear");
-		
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-		
+				
 		MongoClient mongoClient = MongoClients.create();
 		MongoDatabase database = mongoClient.getDatabase("ViterbiSchedule");
 		MongoCollection<Document> majorsCollection = database.getCollection("Majors");
 		MongoCollection<Document> usersCollection = database.getCollection("Users");
 		
-		Document document = majorsCollection.find(eq("_id", major)).first();
+		Document template = majorsCollection.find(eq("_id", major)).first();
 		
-		Document newDocument = new Document("_id", email)
+		Document newUser = new Document("_id", email)
 			.append("name", name)
 			.append("email", email)
 			.append("password",password)
 			.append("major", major)
 			.append("gradyear", gradyear)
-			.append("major", document.get("schedule"));
-		usersCollection.insertOne(newDocument);
-		
+			.append("major", template.get("schedule"));
+		usersCollection.insertOne(newUser);
 		
 		RequestDispatcher dispatch = getServletContext().getRequestDispatcher("/schedule.jsp");
 		dispatch.forward(request,response);
 	}
-	
-
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -86,11 +81,4 @@ public class Register extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
-	
-	Block<Document> printBlock = new Block<Document>() {
-	       public void apply(final Document document) {
-	           System.out.println(document.toJson());
-	       }
-	};
-
 }

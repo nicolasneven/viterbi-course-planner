@@ -18,8 +18,8 @@
 	<div class="login-page">
 	  <div class="form">
 	    <form class="login-form" action = "Login">
-	      <input type="text" placeholder="username"/>
-	      <input type="password" placeholder="password"/>
+	      <input type="text" name="username" placeholder="username"/>
+	      <input type="password" name="password" placeholder="password"/>
 	      <button>login</button>
 	      <p class="message">Not registered? <a href="Register.html">Create an account</a></p>
 	    </form>

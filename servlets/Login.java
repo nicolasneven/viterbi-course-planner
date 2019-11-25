@@ -58,7 +58,6 @@ public class Login extends HttpServlet {
 		MongoCollection<Document> collection = database.getCollection("Users");
 		String username = request.getParameter("username");
 		Document user = collection.find(eq("_id", username)).first();
-		session.setAttribute("message", "");
 		
 		if (user != null) {
 			
