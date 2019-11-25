@@ -1,6 +1,7 @@
 
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -45,7 +46,17 @@ public class Login extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
 		ConnectionString connString = new ConnectionString(
 			"mongodb+srv://password:username@cluster0-v2kcb.gcp.mongodb.net/test?retryWrites=true&w=majority"
 		);
@@ -64,28 +75,20 @@ public class Login extends HttpServlet {
 	        String password = request.getParameter("password");
 	        if (user.get("password").equals(password)) {
 	        	session.setAttribute("user", user.toJson());
+	        	session.setAttribute("message", "");
     			RequestDispatcher dispatch = getServletContext().getRequestDispatcher("/schedule.jsp");
         		dispatch.forward(request, response);
 	        } else {
-	        	RequestDispatcher dispatch = getServletContext().getRequestDispatcher("/Login.jsp");
 				session.setAttribute("message", "Password does not match!");
+				RequestDispatcher dispatch = getServletContext().getRequestDispatcher("/Login.jsp");
 		        dispatch.forward(request, response);
 	        }
 	        
 		} else {
-			RequestDispatcher dispatch = getServletContext().getRequestDispatcher("/Login.jsp");
 			session.setAttribute("message", "User does not exist!");
+			RequestDispatcher dispatch = getServletContext().getRequestDispatcher("/Login.jsp");
 	        dispatch.forward(request, response);
 		}
-
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
 	}
 
 }
