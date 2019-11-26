@@ -17,14 +17,14 @@
 	</div>
 	<div class="login-page">
 	  <div class="form">
-	    <form class="login-form" action = "Login">
-	      <input type="text" placeholder="username"/>
-	      <input type="password" placeholder="password"/>
+	    <form class="login-form" action="Login" method="post">
+	      <input type="text" name="username" placeholder="username"/>
+	      <input type="password" name="password" placeholder="password"/>
 	      <button>login</button>
 	      <p class="message">Not registered? <a href="Register.html">Create an account</a></p>
 	    </form>
+	  <h6 id="error" style="margin-top: 10px"><%=session.getAttribute("message")%></h6>
 	  </div>
 	</div>
-	<h3 id="error"><%=session.getAttribute("message")%></h3>
 </body>
 </html>
