@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="HomePage.css">
 	<meta charset="UTF-8">
 <style>
@@ -47,32 +48,37 @@
 </style>
 </head>
 <body style="font-family:Verdana; background-color:#ba0b35;">
+	<h1>
+		<img src="SC_Logo.png" alt="Schedule Builder" height="100">
+	</h1>
 <div class="header">
-	<table>
-		<tr>
-			<td><img class="logo" src="ScheduleBuilderLogo.png" style="width:350px; height:200px;"/></td>
-			
-		</tr>
-	</table>
-	<form action = "Login.jsp" id="formA"><button id="Login">Login</button></form>
+	<p><form action = "Login.jsp" id="formA"><button id="Login">Login</button></form> 
 	<form action = "Register.html" id="formB"><button id="Register">Register</button></form>
+	</p>
 				
 </div>
 
-<div style="background-color:#f1f1f1;padding:15px;">
-  <p>This is a website made to help Computer Science majors at the University of Southern California build their own schedules.This website will guide you through your course requirements and help you build the perfect schedule!</p>
-  <br>
-  <br>
-  <h4> Please Select Your Major:
+
+<div class="dropdown">
+	
+	<div class="form">
+		<div class="text">
+			<h2> Welcome to Schedule Builder!<h2>
+			<br>
+			<h4> About: </h4>
+			<p>This is a website made to help Computer Science majors at the University of Southern California build their own schedules.This website will guide you through your course requirements and help you build the perfect schedule!</p>
+		</div>
+		<form class="major-form" action="/Schedule.java" method="post">
+			<label for="majorr]">Select a Major</label>
+		 	<select class="form-control" name="major" id="major" required>
+				<option>CSCI</option>
+				<option>CECS</option>
+				<option>CSBA</option>
+				<option>CSGM</option>
+	     	</select>	
+	     <button>Select!</button>
+	     </form>
 </div>
-<div style="overflow:auto">
-  <div class="menu">
-    <div class="button">CSCI</div>
-    <div class="button">CS Games</div>
-    <div class="button">CECS</div>
-    <div class="button">CSBA</div>
-    <form id="formC"><button id="Schedule">Schedule!</button></form>
-  </div>
   
 
 </body>
