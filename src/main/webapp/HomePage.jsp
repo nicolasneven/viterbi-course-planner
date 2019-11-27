@@ -60,7 +60,6 @@
 
 
 <div class="dropdown">
-	
 	<div class="form">
 		<div class="text">
 			<h2> Welcome to Schedule Builder!<h2>
