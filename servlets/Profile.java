@@ -53,6 +53,7 @@ public class Profile extends HttpServlet {
 		MongoDatabase database = mongoClient.getDatabase("ViterbiSchedule");
 		MongoCollection<Document> collection = database.getCollection("Users");
 		Document user = collection.find(eq("_id", "nneven@usc.edu")).first();
+		session.setAttribute("user", user.toJson());
 		session.setAttribute("name", user.get("name"));
 		session.setAttribute("major", user.get("major"));
 		session.setAttribute("gradyear", user.get("gradyear"));
