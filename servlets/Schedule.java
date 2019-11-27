@@ -52,8 +52,8 @@ public class Schedule extends HttpServlet {
 		    .build();
 		MongoClient mongoClient = MongoClients.create(settings);
 		MongoDatabase database = mongoClient.getDatabase("ViterbiSchedule");
-		MongoCollection<Document> collection = database.getCollection("Users");
-		Document user = collection.find(eq("_id", "nneven@usc.edu")).first();
+		MongoCollection<Document> collection = database.getCollection("Majors");
+		Document user = collection.find(eq("_id", request.getParameter("major"))).first();
 		session.setAttribute("user", user.toJson());
 		RequestDispatcher dispatch = getServletContext().getRequestDispatcher("/schedule.jsp");
         dispatch.forward(request, response);
