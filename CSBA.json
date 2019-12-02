@@ -201,30 +201,6 @@
           ]
         },
         {
-          "name": "Calculus III",
-          "deptcode": "MATH",
-          "coursecode": "226",
-          "units": "4",
-          "description": "Vectors, vector valued functions; differential and integral calculus of functions of several variables; Green's theorem.",
-          "prereqs": [
-            {
-              "i": "MATH 126"
-            }
-          ]
-        },
-        {
-          "name": "Probability Theory",
-          "deptcode": "MATH",
-          "coursecode": "407",
-          "units": "4",
-          "description": "Probability spaces, discrete and continuous distributions, moments, characteristic functions, sequences of random variables, laws of large numbers, central limit theorem, special probability laws.",
-          "prereqs": [
-            {
-              "i": "MATH 226"
-            }
-          ]
-        },
-        {
           "name": "Basic Science I",
           "deptcode": "PHYS",
           "coursecode": "151",
@@ -232,14 +208,6 @@
           "description": "BISC 120, CHEM 105, PHYS 151",
           "prereqs": null
         },
-        {
-          "name": "Basic Science II",
-          "deptcode": "PHYS",
-          "coursecode": "161",
-          "units": "4",
-          "description": "BISC 121, CHEM 115, PHYS 161",
-          "prereqs": null
-        }
       ]
     },
     {
