@@ -37,6 +37,95 @@
       "section": "major-reqs",
       "classes": [
         {
+          "name": "Foundations of Accounting",
+          "deptcode": "ACCT",
+          "coursecode": "410x",
+          "units": "4",
+          "description": "Non-technical presentation of accounting for users of accounting information; introduction to financial and managerial accounting. Not open to students with course credits in accounting. Not available for unit or course credit toward a degree in Accounting or Business Administration.",
+          "prereqs": null
+        },
+        {
+          "name": "Communication Strategy in Business",
+          "deptcode": "BUAD",
+          "coursecode": "302",
+          "units": "4",
+          "description": "Theory, practices, and techniques of business communication strategy essential to external and organizational communication; group and interpersonal communication; development of skill in oral and written communication.",
+          "prereqs": null
+        },
+        {
+          "name": "Organizational Behavior and Leadership",
+          "deptcode": "BUAD",
+          "coursecode": "304",
+          "units": "4",
+          "description": "The role of leadership in business organizations; concepts and skills for managing oneself and others.",
+          "prereqs": null
+        },
+        {
+          "name": "Business Finance",
+          "deptcode": "BUAD",
+          "coursecode": "306",
+          "units": "4",
+          "description": "Financial problems of business enterprise; function of financial manager; sources of funds; instruments, institutions, and practices of finance; problems of financial management using case studies.",
+          "prereqs": [
+            {
+              "i": "ACCT 410x"
+              "ii": "BUAD 351"
+            }
+          ]
+        },
+        {
+          "name": "Strategic Management",
+          "deptcode": "BUAD",
+          "coursecode": "497",
+          "units": "4",
+          "description": "Examination of managerial decision-making, planning, and policy under changing environments; readings, cases, exercises, simulations.",
+          "prereqs": [
+            {
+              "i": "ACCT 410x"
+              "ii": "BUAD 304"
+              "iii": "BUAD 307"
+              "iv": "BUAD 306"
+              "v": "BUAD 302"
+            }
+          ]
+        },
+        {
+          "name": "Marketing Fundamentals",
+          "deptcode": "BUAD",
+          "coursecode": "307",
+          "units": "4",
+          "description": "Develops a managerial viewpoint in planning and evaluating marketing decisions of the firm: products, pricing, channels, promotion, information processing, legal implications, and marketing in contemporary society.",
+          "prereqs": null
+        },
+        {
+          "name": "Operations Management",
+          "deptcode": "BUAD",
+          "coursecode": "311",
+          "units": "4",
+          "description": "Fundamentals of operations management. Skills needed to analyze, manage, and improve business processes. Topics include: process, capacity, service, and inventory management and optimization.",
+          "prereqs": null
+        },
+        {
+          "name": "Microeconomics for Business",
+          "deptcode": "ECON",
+          "coursecode": "351",
+          "units": "4",
+          "description": "Development and business applications of: theory of the firm; theory of the consumer; intertemporal decisions; decisions under risk; market failures; industrial and enterprise structure. Not for major credit for: economics, economics/mathematics, social sciences (economics) majors.",
+          "prereqs": [
+            {
+              "i": "MATH 125"
+            }
+          ]
+        },
+        {
+          "name": "Macroeconomics for Business",
+          "deptcode": "ECON",
+          "coursecode": "352",
+          "units": "4",
+          "description": "Theoretical development and significance to business and markets of economic growth; inflation; unemployment; monetary and fiscal policy; business cycles; savings and investment; exchange rates.",
+          "prereqs": null
+        },
+        {
           "name": "Introduction to Programming",
           "deptcode": "CSCI",
           "coursecode": "103L",
@@ -126,7 +215,7 @@
           "prereqs": [
             {
               "i": "CSCI 270",
-              "ii": "CSCI 310"
+              "ii": "CSCI 310L"
             }
           ]
         },
@@ -138,7 +227,7 @@
           "description": "Capstone class in which students create their own technology startup, leveraging comprehensive CS knowledge and best industry practices.",
           "prereqs": [
             {
-              "i": "CSCI 104",
+              "i": "CSCI 104L",
               "ii": "CSCI 170"
             }
           ]
@@ -200,6 +289,30 @@
             }
           ]
         },
+         {
+          "name": "Linear Algebra and Linear Differential Equations",
+          "deptcode": "MATH",
+          "coursecode": "225",
+          "units": "4",
+          "description": "Matrices, systems of linear equations, vector spaces, linear transformations, eigenvalues, systems of linear differential equations.",
+          "prereqs": [
+            {
+              "i": "MATH 126"
+            }
+          ]
+        },
+        {
+          "name": "Probability Theory",
+          "deptcode": "MATH",
+          "coursecode": "407",
+          "units": "4",
+          "description": "Probability spaces, discrete and continuous distributions, moments, characteristic functions, sequences of random variables, laws of large numbers, central limit theorem, special probability laws.",
+          "prereqs": [
+            {
+              "i": "MATH 226"
+            }
+          ]
+        },
         {
           "name": "Basic Science I",
           "deptcode": "PHYS",
@@ -222,7 +335,7 @@
           "prereqs": null
         },
         {
-          "name": "Humanistic Inquiry",
+          "name": "Humanistic Inquiry 1",
           "deptcode": "GE",
           "coursecode": "B",
           "units": "4",
@@ -230,7 +343,23 @@
           "prereqs": null
         },
         {
-          "name": "Social Analysis",
+          "name": "Humanistic Inquiry 2",
+          "deptcode": "GE",
+          "coursecode": "B",
+          "units": "4",
+          "description": "We all are self-reflective. We try to make sense of what it means to be human and how to relate to one another. We seek to understand ourselves and the world around us, and always we think about how things could be, or should be, or might have been. Humanistic inquiry takes us into realms that lie at the heart of what it means to be a thinking, feeling person, and into realms of interpretation and analysis beyond what facts and figures alone can tell us.",
+          "prereqs": null
+        },
+        {
+          "name": "Social Analysis 1",
+          "deptcode": "GE",
+          "coursecode": "C",
+          "units": "4",
+          "description": "At a time of rapid social, economic, and cultural transformation, both in the United States and globally, the insights of social analysis take on critical significance. The social sciences seek to explain the causes and consequences of a wide range of complex phenomena, including how individual and collective human action shapes and is shaped by economic organizations, political institutions, and social and cultural settings broadly understood. These phenomena include the role of gender, sexuality, race, class and other aspects of identity across time and settings in the United States and the world. Courses in this area will introduce students to analytical approaches and methods of social sciences, quantitative and/or qualitative, and how these insights can be brought to bear to better understand our social world.",
+          "prereqs": null
+        },
+        {
+          "name": "Social Analysis 2",
           "deptcode": "GE",
           "coursecode": "C",
           "units": "4",
