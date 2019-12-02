@@ -83,12 +83,12 @@
         {
           "name": "Principles of Software Development",
           "deptcode": "CSCI",
-          "coursecode": "201",
+          "coursecode": "201L",
           "units": "4",
           "description": "Object-oriented paradigm for programming-in-the-large in Java; writing sophisticated concurrent applications with animation and graphic user interfaces; using professional tools on team project.",
           "prereqs": [
             {
-              "i": "CSCI 104"
+              "i": "CSCI 104L"
             }
           ]
         },
@@ -100,7 +100,7 @@
           "description": "Algorithm analysis. Greedy algorithms, divide and conquer, dynamic programming, graph algorithms. NP-completeness and basic recursion theory and undecidability. Sorting lower bounds. Number-theory based cryptography.",
           "prereqs": [
             {
-              "i": "CSCI 104",
+              "i": "CSCI 104L",
               "ii": "CSCI 170"
             }
           ]
@@ -108,16 +108,28 @@
         {
           "name": "Introduction to Operating Systems",
           "deptcode": "CSCI",
-          "coursecode": "350",
+          "coursecode": "350L",
           "units": "4",
           "description": "Basic issues in concurrency, deadlock control, synchronization scheduling, memory management, protection and access control, inter-process communication, and structured design. Laboratory experiences with Unix-like operating system.",
           "prereqs": [
             {
-              "i": "CSCI 201",
+              "i": "CSCI 201L",
               "ii": [
                 "CSCI 356",
                 "EE 354"
               ]
+            }
+          ]
+        },
+        {
+          "name": "Software Engineering",
+          "deptcode": "CSCI",
+          "coursecode": "310L",
+          "units": "4",
+          "description": "Introduction to the software engineering process and software lifecycle. Covers project management, requirements, architecture, design, implementation, testing, and maintenance phase activities in team based projects.",
+          "prereqs": [
+            {
+              "i": "CSCI 104L",
             }
           ]
         },
@@ -129,19 +141,19 @@
           "description": "Computer organization; entity abstraction and representation; program execution; code optimization; memory usage; exception handling; processing control; computer performance; hands-on work done in C and assembly.",
           "prereqs": [
             {
-              "i": "CSCI 104"
+              "i": "CSCI 104L"
             }
           ]
         },
         {
           "name": "Introduction to Artificial Intelligence",
           "deptcode": "CSCI",
-          "coursecode": "360",
+          "coursecode": "360L",
           "units": "4",
           "description": "Concepts and algorithms underlying the understanding and construction of intelligent systems. Agents, problem solving, search, representation, reasoning, planning, machine learning.",
           "prereqs": [
             {
-              "i": "CSCI 104",
+              "i": "CSCI 104L",
               "ii": "CSCI 170"
             }
           ]
@@ -155,7 +167,7 @@
           "prereqs": [
             {
               "i": "CSCI 270",
-              "ii": "CSCI 310"
+              "ii": "CSCI 310L"
             }
           ]
         },
@@ -167,7 +179,7 @@
           "description": "Capstone class in which students create their own technology startup, leveraging comprehensive CS knowledge and best industry practices.",
           "prereqs": [
             {
-              "i": "CSCI 104",
+              "i": "CSCI 104L",
               "ii": "CSCI 170"
             }
           ]
