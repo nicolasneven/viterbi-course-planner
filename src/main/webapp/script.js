@@ -111,7 +111,7 @@ function saveData(){
 	*/
 	//$("test").html("hello");
 	
-	return false;
+	return true;
 }
 
 
