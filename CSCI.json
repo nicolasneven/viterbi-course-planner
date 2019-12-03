@@ -129,7 +129,7 @@
           "description": "Introduction to the software engineering process and software lifecycle. Covers project management, requirements, architecture, design, implementation, testing, and maintenance phase activities in team based projects.",
           "prereqs": [
             {
-              "i": "CSCI 104L",
+              "i": "CSCI 104L"
             }
           ]
         },

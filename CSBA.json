@@ -68,7 +68,7 @@
           "description": "Financial problems of business enterprise; function of financial manager; sources of funds; instruments, institutions, and practices of finance; problems of financial management using case studies.",
           "prereqs": [
             {
-              "i": "ACCT 410x"
+              "i": "ACCT 410x",
               "ii": "BUAD 351"
             }
           ]
@@ -81,10 +81,10 @@
           "description": "Examination of managerial decision-making, planning, and policy under changing environments; readings, cases, exercises, simulations.",
           "prereqs": [
             {
-              "i": "ACCT 410x"
-              "ii": "BUAD 304"
-              "iii": "BUAD 307"
-              "iv": "BUAD 306"
+              "i": "ACCT 410x",
+              "ii": "BUAD 304",
+              "iii": "BUAD 307",
+              "iv": "BUAD 306",
               "v": "BUAD 302"
             }
           ]
@@ -202,7 +202,7 @@
           "description": "Introduction to the software engineering process and software lifecycle. Covers project management, requirements, architecture, design, implementation, testing, and maintenance phase activities in team based projects.",
           "prereqs": [
             {
-              "i": "CSCI 104L",
+              "i": "CSCI 104L"
             }
           ]
         },
@@ -320,7 +320,7 @@
           "units": "4",
           "description": "BISC 120, CHEM 105, PHYS 151",
           "prereqs": null
-        },
+        }
       ]
     },
     {
