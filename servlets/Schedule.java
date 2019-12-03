@@ -21,7 +21,9 @@ import static com.mongodb.client.model.Projections.*;
 import com.mongodb.client.model.Sorts;
 import java.util.Arrays;
 import org.bson.Document;
-
+import org.json.simple.JSONArray; 
+import org.json.simple.JSONObject;
+import org.json.simple.parser.*;
 
 /**
  * Servlet implementation class Schedule
@@ -41,7 +43,21 @@ public class Schedule extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		HttpSession session = request.getSession();
+		ConnectionString connString = new ConnectionString(
+			"mongodb+srv://password:username@cluster0-v2kcb.gcp.mongodb.net/test?retryWrites=true&w=majority"
+		);
+		MongoClientSettings settings = MongoClientSettings.builder()
+		    .applyConnectionString(connString)
+		    .retryWrites(true)
+		    .build();
+		MongoClient mongoClient = MongoClients.create(settings);
+		MongoDatabase database = mongoClient.getDatabase("ViterbiSchedule");
+		MongoCollection<Document> collection = database.getCollection("Majors");
+		Document user = collection.find(eq("_id", request.getParameter("major"))).first();
+		session.setAttribute("user", user.toJson());
+		RequestDispatcher dispatch = getServletContext().getRequestDispatcher("/schedule.jsp");
+        dispatch.forward(request, response);
 	}
 
 	/**
@@ -59,8 +75,17 @@ public class Schedule extends HttpServlet {
 		    .build();
 		MongoClient mongoClient = MongoClients.create(settings);
 		MongoDatabase database = mongoClient.getDatabase("ViterbiSchedule");
-		MongoCollection<Document> collection = database.getCollection("Majors");
-		Document user = collection.find(eq("_id", request.getParameter("major"))).first();
+		MongoCollection<Document> collection = database.getCollection("Users");
+		String username = "";
+		try {
+			JSONObject jo = (JSONObject) new JSONParser().parse((String) session.getAttribute("user"));
+			username = (String) jo.get("_id");
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Document user = collection.find(eq("_id", username)).first();
+		
 		session.setAttribute("user", user.toJson());
 		RequestDispatcher dispatch = getServletContext().getRequestDispatcher("/schedule.jsp");
         dispatch.forward(request, response);
