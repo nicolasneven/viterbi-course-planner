@@ -15,7 +15,7 @@
 <body onload="loadSaved(user);">
   <div class="header">
   	<h1>
-  	<a href="HomePage.jsp"><img src="SC_Logo.png" alt="Schedule Builder" height="100">      Viterbi Schedule Planner
+  	<a href="HomePage.jsp"><img src="SC_Logo.png" alt="Schedule Builder" height="100"></a>      
   	</h1>
     
   </div>

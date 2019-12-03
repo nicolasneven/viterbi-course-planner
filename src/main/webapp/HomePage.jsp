@@ -32,7 +32,8 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #c70e3a;
+  background-color: white;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 li {
   float: left;
