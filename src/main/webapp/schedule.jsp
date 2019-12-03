@@ -21,8 +21,9 @@
   </div>
   <br><br><br>
 <div class="main-container">
+<div><%=session.getAttribute("data")%></div>
 <div id="test"> <%=session.getAttribute("test")%> </div>
-    <form onsubmit="saveData();" action="HomePage.jsp"><input class="button" type="submit" value="Save" style="float: left;"> </form>
+    <form onsubmit="return saveData();" action="HomePage.jsp"><input class="button" type="submit" value="Save" style="float: left;"> </form>
     <table id="course-table" cellspacing="0" cellpadding="0" > 
     <tr style="background-color:white;">
       <td> <table style="background-color:white;"> <tr style="background-color:white;">
