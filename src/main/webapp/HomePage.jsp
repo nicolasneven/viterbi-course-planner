@@ -78,7 +78,7 @@ li {
 			<h4> About: </h4>
 			<p>This is a website made to help Computer Science majors at the University of Southern California build their own schedules.This website will guide you through your course requirements and help you build the perfect schedule!</p>
 		</div>
-		<form class="major-form" action="Schedule" method="post">
+		<form class="major-form" action="Schedule" method="get">
 			<label for="major">Select a Major</label>
 		 	<select class="form-control" name="major" id="major" required>
 				<option>CSCI</option>
