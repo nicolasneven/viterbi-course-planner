@@ -2,6 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
+  
   <title>Viterbi Course Plannerl</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
@@ -13,7 +14,10 @@
 
 <body onload="loadSaved(user);">
   <div class="header">
-    <h1>Viterbi Schedule Planner</h1>
+  	<h1>
+  	<a href="HomePage.jsp"><img src="SC_Logo.png" alt="Schedule Builder" height="100">      Viterbi Schedule Planner
+  	</h1>
+    
   </div>
   <br><br><br>
 <div class="main-container">
