@@ -96,7 +96,7 @@ function saveData(){
 
 	});
 	
-	return false;
+	return true;
 }
 
 
