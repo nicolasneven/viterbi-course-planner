@@ -207,19 +207,24 @@ li {
   vertical-align: middle;
 }
 
+.EE-class {
+	background: #749fd4;
+}
+
 .CSCI-class {
-  background: orange;
+  background: #ffcb70;
 }
 
-.ee-class {
 
+.MATH-class {
+  background: #f58282;
 }
 
-.math-class {
-  background: red;
+.GE-class{
+	background: #badbaf;
 }
 
-.
+
 
 #classText {
   background: #fff;
