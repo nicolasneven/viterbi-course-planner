@@ -13,7 +13,8 @@ dragula([
   document.getElementById("sem7"),
   document.getElementById("sem8"),
   document.getElementById("premajor-reqs"),
-  document.getElementById("major-reqs"),
+  document.getElementById("lower-division"),
+  document.getElementById("upper-division"),
   document.getElementById("general-education")
 ]);
 removeOnSpill: false
@@ -50,7 +51,7 @@ function loadSaved(DATA) {
 
 
 function saveData(){
-	var json = ' "schedule": [ ';
+	var json = '{ "schedule": [ ';
 	var test = document.getElementById("test");
 	test.innerHTML = ""; 
 	
@@ -64,19 +65,14 @@ function saveData(){
 		for (i of classes){
 			var name = i.id;
 			var deptcode = name.substring(0, name.indexOf("-"));
-			var coursecode = name.substring(name.indexOf("-"));
-			json += '{ "deptcode":"' + deptcode + '", "coursecode":'+ coursecode +'},';
+			var coursecode = name.substring(name.indexOf("-")+1);
+			json += '{ "deptcode":"' + deptcode + '", "coursecode":"'+ coursecode +'"},';
 		}
-		if (classes.size > 0) json = json.substring(0, json.length - 1);
+		if (classes[0] != null) json = json.substring(0, json.length - 1);
 		json += '] },'
-		
-		/*test.innerHTML += element.id + " " ;
-		var classes = element.querySelectorAll(".class");
-		//test.innerHTML +=  typeof classes;
-		for( i in classes){
-			if(classes[i].innerHTML != undefined) test.innerHTML +=  classes[i].innerHTML;
-		}*/
 	}
+	json = json.substring(0, json.length - 1);
+	json += "]}";
 	
 	/*for( i in containers){
 		test.innerHTML += i.id + ": \n";
