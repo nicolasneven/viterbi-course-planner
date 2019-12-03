@@ -51,6 +51,7 @@ function loadSaved(DATA) {
 
 
 function saveData(){
+	return false; 
 	var json = '{ "schedule": [ ';
 	var test = document.getElementById("test");
 	test.innerHTML = ""; 
@@ -82,7 +83,22 @@ function saveData(){
 		}
 	}*/
 	
-	test.innerHTML = json;
+	//test.innerHTML = json;
+	return false; 
+	
+	$.ajax({
+	    type: "POST",
+	    url: "zoetest",
+	    contentType: "application/json",
+	    dataType:'json',
+	    data: {data: JSON.stringify(json)},
+	    error:function(error){
+	        console.log("error",error);
+	    },
+
+	});
+	
+	return false;
 }
 
 
