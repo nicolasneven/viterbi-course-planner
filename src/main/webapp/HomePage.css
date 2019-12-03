@@ -10,6 +10,7 @@
   text-align: left;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
+
 .form select {
   font-family: "Roboto", sans-serif;
   outline: 0;
@@ -38,6 +39,17 @@
 .form button:hover,.form button:active,.form button:focus {
   background: #f0eb59;
 }
+
+.header{
+  width: 100%;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  position: sticky;
+}
+
+
 
 h1{
   background: white;

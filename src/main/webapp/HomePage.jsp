@@ -32,7 +32,8 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #c70e3a;
+  background-color: white;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 li {
   float: left;
@@ -75,11 +76,11 @@ li {
 		<div class="text">
 			<h2> Welcome to Schedule Builder!</h2>
 			<br>
-			<h4> About: </h4>
-			<p>This is a website made to help Computer Science majors at the University of Southern California build their own schedules.This website will guide you through your course requirements and help you build the perfect schedule!</p>
 		</div>
 		<form class="major-form" action="Schedule" method="get">
-			<label for="major">Select a Major</label>
+			<label>Please Register or Login</label><br>
+			<label>         OR               </label><br>
+			<label for="major">Select a Major as a Guest:</label>
 		 	<select class="form-control" name="major" id="major" required>
 				<option>CSCI</option>
 				<option>CECS</option>
@@ -90,6 +91,7 @@ li {
 	     </form>
 	     </div>
 </div>
+
   
 
 </body>
