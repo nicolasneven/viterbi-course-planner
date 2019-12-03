@@ -16,8 +16,11 @@
     <h1>Viterbi Schedule Planner</h1>
   </div>
   <br><br><br>
-<main class="main-container">
-    <table cellpadding="0" cellspacing="0"> <tr> 
+<div class="main-container">
+<div id="test"></div>
+	<button onclick="saveData();" value="Save" style="float: left;">Save</button>
+    
+    <table id="course-table" cellspacing="0" cellpadding="0" > <tr> 
       <td> <ul class="columns">
         <li class="column sem1-column">
           <!-- <div class="column-header">
@@ -99,13 +102,13 @@
       </li>
 
       <li class="column sem8-column">
-        <ul class="class-list" id="sem8">
+        <ul class="class-list" id="ge2">
         </ul>
       </li>
     </ul> 
   </td>
   </tr></table>
-</main>
+</div>
 
 <footer>
   <p></p>
