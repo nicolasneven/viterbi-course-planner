@@ -57,6 +57,14 @@
           ]
         },
         {
+          "name": "Introduction to Embedded Systems",
+          "deptcode": "EE",
+          "coursecode": "109L",
+          "units": "4",
+          "description": "Information representations, embedded programming, digital and serial I/O, analog-to-digital conversion, and interrupt mechanisms. Elementary analog, logic, and state-machine design.",
+          "prereqs": null
+        },
+        {
           "name": "Introduction to Computer Science",
           "deptcode": "CSCI",
           "coursecode": "109",
