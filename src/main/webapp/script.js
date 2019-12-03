@@ -87,15 +87,14 @@ function saveData(){
 	$.ajax({
 	    type: "POST",
 	    url: "zoetest",
-	    contentType: "application/json",
-	    dataType:'json',
-	    data: {data: JSON.stringify(json)},
+	    contentType: "",
+	    dataType:'txt',
+	    data:  JSON.stringify(json),
 	    error:function(error){
 	        console.log("error",error);
 	    },
 
 	});
-	test.innerHTML += "hello";
 	
 	return false;
 }
