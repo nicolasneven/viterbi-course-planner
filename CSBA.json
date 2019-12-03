@@ -33,98 +33,99 @@
       "section": "sem8",
       "classes": []
     },
+    
     {
-      "section": "major-reqs",
+      "section": "premajor-reqs",
       "classes": [
         {
-          "name": "Foundations of Accounting",
-          "deptcode": "ACCT",
-          "coursecode": "410x",
+          "name": "Writing and Critical Reasoning - Thematic Approaches",
+          "deptcode": "WRIT",
+          "coursecode": "150",
           "units": "4",
-          "description": "Non-technical presentation of accounting for users of accounting information; introduction to financial and managerial accounting. Not open to students with course credits in accounting. Not available for unit or course credit toward a degree in Accounting or Business Administration.",
+          "description": "Academic writing, emphasizing analysis and argumentation, rhetorical judgment, critical reasoning, creative insight, the careful use of evidence, ethical perspectives, logical organization, stylistic and grammatical fluency.",
           "prereqs": null
         },
         {
-          "name": "Communication Strategy in Business",
-          "deptcode": "BUAD",
-          "coursecode": "302",
-          "units": "4",
-          "description": "Theory, practices, and techniques of business communication strategy essential to external and organizational communication; group and interpersonal communication; development of skill in oral and written communication.",
-          "prereqs": null
-        },
-        {
-          "name": "Organizational Behavior and Leadership",
-          "deptcode": "BUAD",
-          "coursecode": "304",
-          "units": "4",
-          "description": "The role of leadership in business organizations; concepts and skills for managing oneself and others.",
-          "prereqs": null
-        },
-        {
-          "name": "Business Finance",
-          "deptcode": "BUAD",
-          "coursecode": "306",
-          "units": "4",
-          "description": "Financial problems of business enterprise; function of financial manager; sources of funds; instruments, institutions, and practices of finance; problems of financial management using case studies.",
+          "name": "Advanced Writing",
+          "deptcode": "CSCI",
+          "coursecode": "340",
+          "units": "3",
+          "description": "Instruction in writing for various audiences on topics related to a student's professional or disciplinary interests, with some emphasis on issues of broad public concern.",
           "prereqs": [
             {
-              "i": "ACCT 410x",
-              "ii": "BUAD 351"
+              "i": "WRIT 150"
             }
           ]
         },
         {
-          "name": "Strategic Management",
-          "deptcode": "BUAD",
-          "coursecode": "497",
+          "name": "Engineering Freshman Academy",
+          "deptcode": "CSCI",
+          "coursecode": "102",
+          "units": "2",
+          "description": "Introduction to the profession of engineering. Ethical, political and societal consequences of engineering innovations and the impact of engineering on everyday life. Team projects and guest lectures. Open to freshmen only.",
+          "prereqs": null
+        },
+        {
+          "name": "Calculus I",
+          "deptcode": "MATH",
+          "coursecode": "125",
           "units": "4",
-          "description": "Examination of managerial decision-making, planning, and policy under changing environments; readings, cases, exercises, simulations.",
+          "description": "Limits; continuity, derivatives and applications; antiderivatives; the fundamental theorem of calculus; exponential and logarithmic functions.",
           "prereqs": [
             {
-              "i": "ACCT 410x",
-              "ii": "BUAD 304",
-              "iii": "BUAD 307",
-              "iv": "BUAD 306",
-              "v": "BUAD 302"
+              "i": "MATH 108"
             }
           ]
         },
         {
-          "name": "Marketing Fundamentals",
-          "deptcode": "BUAD",
-          "coursecode": "307",
+          "name": "Calculus II",
+          "deptcode": "MATH",
+          "coursecode": "126",
           "units": "4",
-          "description": "Develops a managerial viewpoint in planning and evaluating marketing decisions of the firm: products, pricing, channels, promotion, information processing, legal implications, and marketing in contemporary society.",
-          "prereqs": null
-        },
-        {
-          "name": "Operations Management",
-          "deptcode": "BUAD",
-          "coursecode": "311",
-          "units": "4",
-          "description": "Fundamentals of operations management. Skills needed to analyze, manage, and improve business processes. Topics include: process, capacity, service, and inventory management and optimization.",
-          "prereqs": null
-        },
-        {
-          "name": "Microeconomics for Business",
-          "deptcode": "ECON",
-          "coursecode": "351",
-          "units": "4",
-          "description": "Development and business applications of: theory of the firm; theory of the consumer; intertemporal decisions; decisions under risk; market failures; industrial and enterprise structure. Not for major credit for: economics, economics/mathematics, social sciences (economics) majors.",
+          "description": "A continuation of MATH 125: trigonometric functions; applications of integration; techniques of integration; indeterminate forms; infinite series; Taylor series; polar coordinates.",
           "prereqs": [
             {
               "i": "MATH 125"
             }
           ]
         },
-        {
-          "name": "Macroeconomics for Business",
-          "deptcode": "ECON",
-          "coursecode": "352",
+         {
+          "name": "Linear Algebra and Linear Differential Equations",
+          "deptcode": "MATH",
+          "coursecode": "225",
           "units": "4",
-          "description": "Theoretical development and significance to business and markets of economic growth; inflation; unemployment; monetary and fiscal policy; business cycles; savings and investment; exchange rates.",
-          "prereqs": null
+          "description": "Matrices, systems of linear equations, vector spaces, linear transformations, eigenvalues, systems of linear differential equations.",
+          "prereqs": [
+            {
+              "i": "MATH 126"
+            }
+          ]
         },
+        {
+          "name": "Probability Theory",
+          "deptcode": "MATH",
+          "coursecode": "407",
+          "units": "4",
+          "description": "Probability spaces, discrete and continuous distributions, moments, characteristic functions, sequences of random variables, laws of large numbers, central limit theorem, special probability laws.",
+          "prereqs": [
+            {
+              "i": "MATH 226"
+            }
+          ]
+        },
+        {
+          "name": "Basic Science I",
+          "deptcode": "PHYS",
+          "coursecode": "151",
+          "units": "4",
+          "description": "BISC 120, CHEM 105, PHYS 151",
+          "prereqs": null
+        }
+      ]
+    },
+    {
+      "section": "lower-division",
+      "classes": [
         {
           "name": "Introduction to Programming",
           "deptcode": "CSCI",
@@ -235,91 +236,116 @@
       ]
     },
     {
-      "section": "premajor-reqs",
+      "section": "upper-division",
       "classes": [
         {
-          "name": "Writing and Critical Reasoning - Thematic Approaches",
-          "deptcode": "WRIT",
-          "coursecode": "150",
+          "name": "Foundations of Accounting",
+          "deptcode": "ACCT",
+          "coursecode": "410x",
           "units": "4",
-          "description": "Academic writing, emphasizing analysis and argumentation, rhetorical judgment, critical reasoning, creative insight, the careful use of evidence, ethical perspectives, logical organization, stylistic and grammatical fluency.",
+          "description": "Non-technical presentation of accounting for users of accounting information; introduction to financial and managerial accounting. Not open to students with course credits in accounting. Not available for unit or course credit toward a degree in Accounting or Business Administration.",
           "prereqs": null
         },
         {
-          "name": "Advanced Writing",
-          "deptcode": "CSCI",
-          "coursecode": "340",
-          "units": "3",
-          "description": "Instruction in writing for various audiences on topics related to a student's professional or disciplinary interests, with some emphasis on issues of broad public concern.",
+          "name": "Communication Strategy in Business",
+          "deptcode": "BUAD",
+          "coursecode": "302",
+          "units": "4",
+          "description": "Theory, practices, and techniques of business communication strategy essential to external and organizational communication; group and interpersonal communication; development of skill in oral and written communication.",
+          "prereqs": null
+        },
+        {
+          "name": "Organizational Behavior and Leadership",
+          "deptcode": "BUAD",
+          "coursecode": "304",
+          "units": "4",
+          "description": "The role of leadership in business organizations; concepts and skills for managing oneself and others.",
+          "prereqs": null
+        },
+        {
+          "name": "Business Finance",
+          "deptcode": "BUAD",
+          "coursecode": "306",
+          "units": "4",
+          "description": "Financial problems of business enterprise; function of financial manager; sources of funds; instruments, institutions, and practices of finance; problems of financial management using case studies.",
           "prereqs": [
             {
-              "i": "WRIT 150"
+              "i": "ACCT 410x",
+              "ii": "BUAD 351"
             }
           ]
         },
         {
-          "name": "Engineering Freshman Academy",
-          "deptcode": "CSCI",
-          "coursecode": "102",
-          "units": "2",
-          "description": "Introduction to the profession of engineering. Ethical, political and societal consequences of engineering innovations and the impact of engineering on everyday life. Team projects and guest lectures. Open to freshmen only.",
-          "prereqs": null
-        },
-        {
-          "name": "Calculus I",
-          "deptcode": "MATH",
-          "coursecode": "125",
+          "name": "Strategic Management",
+          "deptcode": "BUAD",
+          "coursecode": "497",
           "units": "4",
-          "description": "Limits; continuity, derivatives and applications; antiderivatives; the fundamental theorem of calculus; exponential and logarithmic functions.",
+          "description": "Examination of managerial decision-making, planning, and policy under changing environments; readings, cases, exercises, simulations.",
           "prereqs": [
             {
-              "i": "MATH 108"
+              "i": "ACCT 410x",
+              "ii": "BUAD 304",
+              "iii": "BUAD 307",
+              "iv": "BUAD 306",
+              "v": "BUAD 302"
             }
           ]
         },
         {
-          "name": "Calculus II",
-          "deptcode": "MATH",
-          "coursecode": "126",
+          "name": "Marketing Fundamentals",
+          "deptcode": "BUAD",
+          "coursecode": "307",
           "units": "4",
-          "description": "A continuation of MATH 125: trigonometric functions; applications of integration; techniques of integration; indeterminate forms; infinite series; Taylor series; polar coordinates.",
+          "description": "Develops a managerial viewpoint in planning and evaluating marketing decisions of the firm: products, pricing, channels, promotion, information processing, legal implications, and marketing in contemporary society.",
+          "prereqs": null
+        },
+        {
+          "name": "Operations Management",
+          "deptcode": "BUAD",
+          "coursecode": "311",
+          "units": "4",
+          "description": "Fundamentals of operations management. Skills needed to analyze, manage, and improve business processes. Topics include: process, capacity, service, and inventory management and optimization.",
+          "prereqs": null
+        },
+        {
+          "name": "Microeconomics for Business",
+          "deptcode": "ECON",
+          "coursecode": "351",
+          "units": "4",
+          "description": "Development and business applications of: theory of the firm; theory of the consumer; intertemporal decisions; decisions under risk; market failures; industrial and enterprise structure. Not for major credit for: economics, economics/mathematics, social sciences (economics) majors.",
           "prereqs": [
             {
               "i": "MATH 125"
             }
           ]
         },
-         {
-          "name": "Linear Algebra and Linear Differential Equations",
-          "deptcode": "MATH",
-          "coursecode": "225",
-          "units": "4",
-          "description": "Matrices, systems of linear equations, vector spaces, linear transformations, eigenvalues, systems of linear differential equations.",
-          "prereqs": [
-            {
-              "i": "MATH 126"
-            }
-          ]
-        },
         {
-          "name": "Probability Theory",
-          "deptcode": "MATH",
-          "coursecode": "407",
+          "name": "Macroeconomics for Business",
+          "deptcode": "ECON",
+          "coursecode": "352",
           "units": "4",
-          "description": "Probability spaces, discrete and continuous distributions, moments, characteristic functions, sequences of random variables, laws of large numbers, central limit theorem, special probability laws.",
-          "prereqs": [
-            {
-              "i": "MATH 226"
-            }
-          ]
-        },
-        {
-          "name": "Basic Science I",
-          "deptcode": "PHYS",
-          "coursecode": "151",
-          "units": "4",
-          "description": "BISC 120, CHEM 105, PHYS 151",
+          "description": "Theoretical development and significance to business and markets of economic growth; inflation; unemployment; monetary and fiscal policy; business cycles; savings and investment; exchange rates.",
           "prereqs": null
+        },
+        {
+          "name": "Introduction to Programming",
+          "deptcode": "CSCI",
+          "coursecode": "103L",
+          "units": "4",
+          "description": "Basic datatypes, assignments, control statements (if, switch, for, while), input/output (printf, scanf, cin, cout), functions, arrays, structures, recursion, dynamic memory, file handling. Programming in C/C++.",
+          "prereqs": null
+        },
+        {
+          "name": "Data Structures and Object Oriented Design",
+          "deptcode": "CSCI",
+          "coursecode": "104L",
+          "units": "4",
+          "description": "Introduces the student to standard data structures (linear structures such as linked lists, (balanced) trees, priority queues, and hashtables), using the C++ programming language.",
+          "prereqs": [
+            {
+              "i": "CSCI 103L"
+            }
+          ]
         }
       ]
     },
