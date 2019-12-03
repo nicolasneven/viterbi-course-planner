@@ -18,7 +18,7 @@
   <br><br><br>
 <div class="main-container">
 <div id="test"></div>
-	<button onclick="saveData();" value="Save" style="float: left;">Save</button>
+	<form> <input type="button" onclick="saveData();" value="Save" style="float: left;"></input> </form>
     
     <table id="course-table" cellspacing="0" cellpadding="0" > <tr> 
       <td> <ul class="columns">
@@ -88,21 +88,21 @@
         </ul>
       </li>
 
-      <li class="column sem8-column">
-        <ul class="class-list" id="major-reqs">
+      <li class="column major-column">
+        <ul class="class-list" id="lower-division">
         </ul>
       </li>
     </ul> 
   </td>
   <td>
     <ul class="columns">
-      <li class="column ges-column">
-        <ul class="class-list" id="general-education">
+      <li class="column major-column">
+        <ul class="class-list" id="upper-division">
         </ul>
       </li>
 
-      <li class="column sem8-column">
-        <ul class="class-list" id="ge2">
+      <li class="column ges-column">
+        <ul class="class-list" id="general-education">
         </ul>
       </li>
     </ul> 
