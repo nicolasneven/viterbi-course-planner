@@ -51,7 +51,6 @@ function loadSaved(DATA) {
 
 
 function saveData(){
-	return false; 
 	var json = '{ "schedule": [ ';
 	var test = document.getElementById("test");
 	test.innerHTML = ""; 
@@ -84,7 +83,6 @@ function saveData(){
 	}*/
 	
 	//test.innerHTML = json;
-	return false; 
 	
 	$.ajax({
 	    type: "POST",
@@ -97,6 +95,7 @@ function saveData(){
 	    },
 
 	});
+	test.innerHTML += "hello";
 	
 	return false;
 }
