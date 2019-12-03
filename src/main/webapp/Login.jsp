@@ -11,7 +11,7 @@
 </head>
 <body>
 	<h1>
-		<a href="HomePage.jsp"><img src="SC_Logo.png" alt="Schedule Builder" height="100">
+		<a href="HomePage.jsp"><img src="SC_Logo.png" alt="Schedule Builder" height="100"></a>
 	</h1>
 	<div class="welcome">
 		Welcome Back! 
