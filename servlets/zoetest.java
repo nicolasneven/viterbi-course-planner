@@ -25,6 +25,8 @@ import static com.mongodb.client.model.Filters.*;
 import static com.mongodb.client.model.Projections.*;
 import com.mongodb.client.model.Sorts;
 import java.util.Arrays;
+
+import org.apache.catalina.connector.Response;
 import org.bson.Document;
 
 /**
@@ -49,12 +51,16 @@ public class zoetest extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
+		PrintWriter out = response.getWriter();
 		System.out.println("In post function");
+		out.println("Success");
 		HttpSession session = request.getSession();
 		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
 		
 		String data = request.getParameter("data");
+		session.setAttribute("data", data);
+		
+		
 		session.setAttribute("data", data);
 		session.setAttribute("test", "TEST");
          
