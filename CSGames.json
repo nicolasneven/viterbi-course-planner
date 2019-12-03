@@ -253,7 +253,7 @@
           "description": "Computer graphics, OpenGL, 2D and 3D transformations, Bézier splines, computer animation, rendering including ray tracing, shading and lighting, artistic rendering, virtual reality, visualization.",
           "prereqs": [
             {
-              "i": "CSCI 104L"
+              "i": "CSCI 104L",
               "ii": "MATH 225"
             }
           ]
