@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <script>
-  	var user = <%=session.getAttribute("user")%>
+  	var user = <%=session.getAttribute("user")%>;
   </script>
 </head>
 
@@ -17,10 +17,20 @@
   </div>
   <br><br><br>
 <div class="main-container">
-<div id="test"></div>
-	<form> <input type="button" onclick="saveData();" value="Save" style="float: left;"></input> </form>
-    
-    <table id="course-table" cellspacing="0" cellpadding="0" > <tr> 
+<div id="test"> <%=session.getAttribute("test")%> </div>
+    <form onsubmit="saveData();" action="HomePage.jsp"><input class="button" type="submit" value="Save" style="float: left;"> </form>
+    <table id="course-table" cellspacing="0" cellpadding="0" > 
+    <tr style="background-color:white;">
+      <td> <table style="background-color:white;"> <tr style="background-color:white;">
+      <td style="text-align:center; padding: 10px;vertical-align: bottom;"> Freshman </td>
+      <td style="text-align:center; padding: 10px;vertical-align: bottom;"> Sophomore </td>
+      </tr> </table> </td>
+      <td> <table style="background-color:white;"> <tr style="background-color:white;">
+      <td style="text-align:center; padding: 10px;vertical-align: bottom;"> Junior</td>
+      <td style="text-align:center; padding: 10px;vertical-align: bottom;"> Senior</td>
+      </tr> </table> </td>
+    </tr>
+    <tr> 
       <td> <ul class="columns">
         <li class="column sem1-column">
           <!-- <div class="column-header">
