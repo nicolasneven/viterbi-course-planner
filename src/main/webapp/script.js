@@ -52,10 +52,6 @@ function loadSaved(DATA) {
 
 function saveData(){
 	var json = '{ "schedule": [ ';
-	var test = document.getElementById("test");
-	test.innerHTML = ""; 
-	
-	
 	var containers = document.getElementsByClassName("class-list");
 	for (element of containers) {
 		
@@ -74,27 +70,46 @@ function saveData(){
 	json = json.substring(0, json.length - 1);
 	json += "]}";
 	
-	/*for( i in containers){
-		test.innerHTML += i.id + ": \n";
-		var classes = containers.querySelector("li");
-		for( j in classes){
-			test += classes[j].id + "\n";
-		}
-	}*/
+	
+	
+	
+	
+	
+	var test = document.getElementById("test");
+	test.innerHTML = ""; 
+	$(document).ready(function() {
+		$.post("Schedule", {schedule: json}, function(schedule, status){
+		    $("test").html(status);
+		  });
+	});
+	
 	
 	//test.innerHTML = json;
 	
-	$.ajax({
+	
+	/*var xhttp = new XMLHttpRequest();
+	xhttp.open("POST", "zoetest?name=" + document.myform.name.value 
+			+ "&email=" + document.myform.email.value, false);
+	xhttp.send();
+	if (xhttp.responseText.trim().length > 0) {
+		document.getElementById("error-msg").innerHTML = xhttp.responseText;
+		return false;
+	}*/
+		
+	/*$.ajax({
 	    type: "POST",
 	    url: "zoetest",
 	    contentType: "",
 	    dataType:'txt',
 	    data:  JSON.stringify(json),
+	    success: function ()
 	    error:function(error){
 	        console.log("error",error);
 	    },
 
 	});
+	*/
+	//$("test").html("hello");
 	
 	return false;
 }
