@@ -80,13 +80,7 @@ public class Register extends HttpServlet {
 		MongoCollection<Document> usersCollection = database.getCollection("Users");
 		
 		Document template = majorsCollection.find(eq("_id", major)).first();
-		Document userExists = usersCollection.find(eq("_id",email)).first();
-		if(userExists != null) {
-			request.setAttribute("UserExists", "This email is already in use.");
-			nextPage = "/Register.jsp";
-		}
-		else {
-			request.setAttribute("UserExists", "");
+		
 		Document newUser = new Document("_id", email)
 			.append("name", name)
 			.append("email", email)
