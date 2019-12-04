@@ -34,9 +34,15 @@
   	<div class="header">
 <ul id="ul">
   <li id="li"><a style="text-decoration: none; border-bottom: 1px solid white;" href="HomePage.jsp"><img src="SC_Logo.png" alt="Schedule Builder" height="100"></a></li>
-  <li id="li" style="float:right"><a href="Profile"><img src="ProfileLogo.png" ALIGN="right" alt="ProfileLogo" height="80"></a></li>
+  <li id="li" style="float:right"><a href="Profile"><img id="profile" src="ProfileLogo.png" ALIGN="right" alt="ProfileLogo" height="80"></a></li>
 </ul>		
 </div>
+<script>
+var guest = <%= session.getAttribute("guest") %>
+	if (guest != null) {
+		document.getElementById("profile").style.display = "none";
+	}
+</script>
       <br><br><br>
 <div class="main-container">
     <form onsubmit="return saveData();" action="HomePage.jsp"><input type="hidden" name="data"><input class="button" type="submit" value="Save" style="float: left;"> </form>
