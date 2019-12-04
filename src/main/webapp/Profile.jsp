@@ -15,10 +15,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
 <body onload="update()">
-<form action = "schedule.jsp" id="formA"><button id="Schedule" style="float: right;">Schedule!</button></form>
+<form action = "schedule.jsp" id="formA"><button id="Schedule" style="float: right;">Back to Schedule!</button></form>
+<div class ="head">
 <h2> <%= session.getAttribute("name") %> </h2>
 <h3> <%= session.getAttribute("major") %> </h3>
 <h4> <%= session.getAttribute("gradyear") %> </h4>
+</div>
 <div class="table">
 	<p id="table"></p>	
 </div>
