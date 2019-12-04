@@ -5,10 +5,46 @@
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="Profile.css">
+<style>
+.main-container {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 80%;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
 
+body {
+  padding: 0;
+  margin: 0;
+  background: #c70e3a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, #c70e3a, #c73850);
+  background: -moz-linear-gradient(right, #c70e3a, #c73850);
+  background: -o-linear-gradient(right, #c70e3a, #c73850);
+  background: linear-gradient(to left, #c70e3a, #c73850);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}
+.header{
+  width: 100%;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  position: sticky;
+}
+
+h1{
+  padding: 20px; 
+  color: #555555;
+}
+</style>
 <meta charset="UTF-8">
 <title>My Profile Page</title>
-  <link rel="stylesheet" href="./style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
