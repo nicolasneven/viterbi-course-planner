@@ -21,6 +21,9 @@ import static com.mongodb.client.model.Projections.*;
 import com.mongodb.client.model.Sorts;
 import java.util.Arrays;
 import org.bson.Document;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 /**
  * Servlet implementation class Profile
@@ -53,8 +56,16 @@ public class Profile extends HttpServlet {
 		MongoDatabase database = mongoClient.getDatabase("ViterbiSchedule");
 		MongoCollection<Document> users = database.getCollection("Users");
 		MongoCollection<Document> majors = database.getCollection("Majors");
-		Document profile = users.find(eq("_id", "nneven@usc.edu")).first();
-		Document classes = majors.find(eq("_id", "CSCI")).first();
+		String username = "";
+		try {
+			JSONObject jo = (JSONObject) new JSONParser().parse((String) session.getAttribute("user"));
+			username = (String) jo.get("_id");
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Document profile = users.find(eq("_id", username)).first();
+		Document classes = majors.find(eq("_id", profile.get("major"))).first();
 		session.setAttribute("classes", classes.toJson());
 		session.setAttribute("user", profile.toJson());
 		session.setAttribute("name", profile.get("name"));
