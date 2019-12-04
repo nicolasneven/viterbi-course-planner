@@ -74,7 +74,6 @@ public class Login extends HttpServlet {
 	        String password = request.getParameter("password");
 	        if (user.get("password").equals(password)) {
 	        	session.setAttribute("user", user.toJson());
-	        	session.setAttribute("guest", null);
 	        	session.setAttribute("message", "");
     			RequestDispatcher dispatch = getServletContext().getRequestDispatcher("/schedule.jsp");
         		dispatch.forward(request, response);
