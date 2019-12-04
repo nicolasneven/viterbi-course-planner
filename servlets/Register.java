@@ -96,6 +96,7 @@ public class Register extends HttpServlet {
 			.append("schedule", template.get("schedule"));
 		usersCollection.insertOne(newUser);
 		session.setAttribute("user", newUser.toJson());
+		session.setAttribute("guest", null);
 		RequestDispatcher dispatch = getServletContext().getRequestDispatcher("/schedule.jsp");
 		dispatch.forward(request,response);
 	}
