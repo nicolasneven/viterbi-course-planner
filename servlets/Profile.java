@@ -51,12 +51,15 @@ public class Profile extends HttpServlet {
 		    .build();
 		MongoClient mongoClient = MongoClients.create(settings);
 		MongoDatabase database = mongoClient.getDatabase("ViterbiSchedule");
-		MongoCollection<Document> collection = database.getCollection("Users");
-		Document user = collection.find(eq("_id", "nneven@usc.edu")).first();
-		session.setAttribute("user", user.toJson());
-		session.setAttribute("name", user.get("name"));
-		session.setAttribute("major", user.get("major"));
-		session.setAttribute("gradyear", user.get("gradyear"));
+		MongoCollection<Document> users = database.getCollection("Users");
+		MongoCollection<Document> majors = database.getCollection("Majors");
+		Document profile = users.find(eq("_id", "nneven@usc.edu")).first();
+		Document classes = majors.find(eq("_id", "CSCI")).first();
+		session.setAttribute("classes", classes.toJson());
+		session.setAttribute("user", profile.toJson());
+		session.setAttribute("name", profile.get("name"));
+		session.setAttribute("major", profile.get("major"));
+		session.setAttribute("gradyear", profile.get("gradyear"));
 		RequestDispatcher dispatch = getServletContext().getRequestDispatcher("/Profile.jsp");
         dispatch.forward(request, response);
 	}

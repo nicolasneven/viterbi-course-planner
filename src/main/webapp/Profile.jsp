@@ -29,7 +29,7 @@
 <script>
 	var modal = "";
 	var txt = "<table id='classes' class='display' border='1'><thead><tr><th>Class</th><th>Description</th><th>Details</th></tr></thead><tbody>";
-	DATA = <%= session.getAttribute("user") %>;
+	DATA = <%= session.getAttribute("classes") %>;
 	for(i in DATA.schedule) {
 		for(j in DATA.schedule[i].classes) {
 			var course = DATA.schedule[i].classes[j];

@@ -23,9 +23,7 @@
   </div>
   <br><br><br>
 <div class="main-container">
-<div><%=session.getAttribute("data")%></div>
-<div id="test"> <%=session.getAttribute("test")%> </div>
-    <form onsubmit="return saveData();" action="HomePage.jsp"><input class="button" type="submit" value="Save" style="float: left;"> </form>
+    <form onsubmit="return saveData();" action="HomePage.jsp"><input type="hidden" name="data"><input class="button" type="submit" value="Save" style="float: left;"> </form>
     <table id="course-table" cellspacing="0" cellpadding="0" > 
     <tr style="background-color:white;">
       <td> <table style="background-color:white;"> <tr style="background-color:white;">
@@ -131,6 +129,9 @@
   <p></p>
 </footer>
 <!-- partial -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.js'></script><script  src="./script.js"></script>
 
 </body>
