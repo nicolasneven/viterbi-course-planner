@@ -4,7 +4,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" href="HomePage.css">
+
 <meta charset="UTF-8">
 <title>My Profile Page</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -18,14 +18,10 @@
 <h2> <%= session.getAttribute("name") %> </h2>
 <h3> <%= session.getAttribute("major") %> </h3>
 <h4> <%= session.getAttribute("gradyear") %> </h4>
-<div class="dropdown">
-	<div class="form">
-		<div class="text">
-			<p id="table"></p>
-		</div>
-	</div>
-</div>
+
+<p id="table"></p>	
 <div id="demo"></div>
+
 <script>
 	var modal = "";
 	var txt = "<table id='classes' class='display' border='1'><thead><tr><th>Class</th><th>Description</th><th>Details</th></tr></thead><tbody>";
