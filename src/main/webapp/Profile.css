@@ -49,10 +49,15 @@
   position: sticky;
 }
 
+.table{
+	width: 1200px;
+	margin-right: 50px;
+  	margin-left: 50px;
+}
 
-
-h1{
+.head{
   background: white;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 body {
   background: #ed859d; /* fallback for old browsers */

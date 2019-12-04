@@ -76,37 +76,16 @@ function saveData(){
 	
 	
 	$(document).ready(function() {
-		$.post("Schedule", {schedule: json}, function(schedule, status){
-		  });
+		$.post("Schedule",
+		{
+			schedule: json
+		}, 
+		function(message, status) {
+			if (message != "success") {
+				window.alert(message);
+			}
+		});
 	});
-	
-
-	//test.innerHTML = json;
-	
-	
-	/*var xhttp = new XMLHttpRequest();
-	xhttp.open("POST", "zoetest?name=" + document.myform.name.value 
-			+ "&email=" + document.myform.email.value, false);
-	xhttp.send();
-	if (xhttp.responseText.trim().length > 0) {
-		document.getElementById("error-msg").innerHTML = xhttp.responseText;
-		return false;
-	}*/
-		
-	/*$.ajax({
-	    type: "POST",
-	    url: "zoetest",
-	    contentType: "",
-	    dataType:'txt',
-	    data:  JSON.stringify(json),
-	    success: function ()
-	    error:function(error){
-	        console.log("error",error);
-	    },
-
-	});
-	*/
-	//$("test").html("hello");
 	
 	return false;
 }
