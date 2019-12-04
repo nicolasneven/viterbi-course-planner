@@ -3,7 +3,7 @@
 <body>
 <h2>Test Page!</h2>
 <h3 id="h3"></h3>
-<form action="Profile" method="post">
+<form action="Profile" method="get">
 	<input type="submit" name="button" value="Profile" />
 </form>
 <form action="Schedule" method="post">

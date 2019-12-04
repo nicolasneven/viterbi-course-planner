@@ -56,7 +56,6 @@ public class Login extends HttpServlet {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
 		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
 		ConnectionString connString = new ConnectionString(
 			"mongodb+srv://password:username@cluster0-v2kcb.gcp.mongodb.net/test?retryWrites=true&w=majority"
 		);
