@@ -4,6 +4,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="Profile.css">
 
 <meta charset="UTF-8">
 <title>My Profile Page</title>
@@ -18,8 +19,9 @@
 <h2> <%= session.getAttribute("name") %> </h2>
 <h3> <%= session.getAttribute("major") %> </h3>
 <h4> <%= session.getAttribute("gradyear") %> </h4>
-
-<p id="table"></p>	
+<div class="table">
+	<p id="table"></p>	
+</div>
 <div id="demo"></div>
 
 <script>
