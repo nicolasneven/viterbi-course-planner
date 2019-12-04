@@ -76,8 +76,15 @@ function saveData(){
 	
 	
 	$(document).ready(function() {
-		$.post("Schedule", {schedule: json}, function(schedule, status){
-		  });
+		$.post("Schedule",
+		{
+			schedule: json
+		}, 
+		function(message, status) {
+			if (message != "success") {
+				window.alert(message);
+			}
+		});
 	});
 	
 
