@@ -37,10 +37,21 @@ body {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   position: sticky;
 }
-
-h1{
-  padding: 20px; 
-  color: #555555;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+li {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 </style>
 <meta charset="UTF-8">
@@ -53,11 +64,10 @@ h1{
 </head>
 <body onload="update()">
 <div class="header">
-  	<h1>
-  	<a href="HomePage.jsp"><img src="SC_Logo.png" alt="Schedule Builder" height="100"></a>      
-  	<form action = "schedule.jsp" id="formA"><button id="Schedule" style="float: right;">Schedule!</button></form>
-  	</h1>
-    
+  	<ul>
+	  <li><a href="HomePage.jsp"><img src="SC_Logo.png" alt="Schedule Builder" height="100"></a>    </li>
+	  <li style="float:right"><form action = "schedule.jsp" id="formA"><button id="Schedule" style="float: right">Schedule!</button></form> </li>
+</ul>
   </div>
   <br><br><br>
 <div class="main-container">
