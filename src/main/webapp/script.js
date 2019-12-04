@@ -75,15 +75,12 @@ function saveData(){
 	
 	
 	
-	var test = document.getElementById("test");
-	test.innerHTML = ""; 
 	$(document).ready(function() {
 		$.post("Schedule", {schedule: json}, function(schedule, status){
-		    $("test").html(status);
 		  });
 	});
 	
-	
+
 	//test.innerHTML = json;
 	
 	
