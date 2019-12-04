@@ -28,10 +28,7 @@
 	<h2> <%= session.getAttribute("name") %> </h2>
 <h3> <%= session.getAttribute("major") %> </h3>
 <h4> <%= session.getAttribute("gradyear") %> </h4>
-</div>
-<div class="table">
 	<p id="table"></p>	
-</div>
 <div id="demo"></div>
 </div>
 <script>
