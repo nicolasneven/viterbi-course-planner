@@ -3,6 +3,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="HomePage.css">
 <meta charset="UTF-8">
 <title>My Profile Page</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -12,10 +14,17 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
 <body onload="update()">
+<form action = "schedule.jsp" id="formA"><button id="Schedule" style="float: right;">Schedule!</button></form>
 <h2> <%= session.getAttribute("name") %> </h2>
 <h3> <%= session.getAttribute("major") %> </h3>
 <h4> <%= session.getAttribute("gradyear") %> </h4>
-<p id="table"></p>
+<div class="dropdown">
+	<div class="form">
+		<div class="text">
+			<p id="table"></p>
+		</div>
+	</div>
+</div>
 <div id="demo"></div>
 <script>
 	var modal = "";

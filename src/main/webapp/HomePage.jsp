@@ -69,7 +69,8 @@ li {
   <li style="float:right"><form action = "Register.html" id="formB"><button id="Register">Register</button></form></li>
 </ul>		
 </div>
-
+ <br>
+ <br>
 
 <div class="dropdown">
 	<div class="form">

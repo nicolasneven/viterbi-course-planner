@@ -10,12 +10,14 @@
   <script>
   	var user = <%=session.getAttribute("user")%>;
   </script>
+
 </head>
 
 <body onload="loadSaved(user);">
   <div class="header">
   	<h1>
   	<a href="HomePage.jsp"><img src="SC_Logo.png" alt="Schedule Builder" height="100"></a>      
+  	<a href="Profile"><img src="ProfileLogo.png" ALIGN="right" alt="ProfileLogo" height="80"></a>
   	</h1>
     
   </div>
