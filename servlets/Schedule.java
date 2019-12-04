@@ -94,23 +94,27 @@ public class Schedule extends HttpServlet {
 		BasicDBObject data = new BasicDBObject().parse(schedule);
 		collection.updateOne(eq("_id", username), new Document("$set", new Document(data.toMap())));
 		Document user = collection.find(eq("_id", username)).first();
-		List<Document> courses = (List<Document>) user.get("schedule");
 		PrintWriter out = response.getWriter();
-		int i = 0;
-		boolean error = false;
-		for (Document section : courses) {
-			i++;
-			List<Document> classes = (List<Document>) section.get("classes");
-			if (classes.size() > 4 && i < 9) {
-				out.write("Warning! You are taking a lot of classes in semester " + i + ". We recommend you adjust your courseload as most students take on average 4 classes per semsester.");
-				error = true;
-				break;
+		if (user != null) {
+			List<Document> courses = (List<Document>) user.get("schedule");
+			int i = 0;
+			boolean error = false;
+			for (Document section : courses) {
+				i++;
+				List<Document> classes = (List<Document>) section.get("classes");
+				if (classes.size() > 4 && i < 9) {
+					out.write("Warning! You are taking a lot of classes in semester " + i + ". We recommend you adjust your courseload as most students take on average 4 classes per semsester.");
+					error = true;
+					break;
+				}
 			}
+			if (!error) {
+				out.write("success");
+			}
+			session.setAttribute("user", user.toJson());
+		} else {
+			out.write("You are not logged in! Please create an account to save schedules");
 		}
-		if (!error) {
-			out.write("success");
-		}
-		session.setAttribute("user", user.toJson());
 	}
 
 }
